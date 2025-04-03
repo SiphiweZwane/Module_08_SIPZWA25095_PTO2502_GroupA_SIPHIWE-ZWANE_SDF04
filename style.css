@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -15,16 +16,17 @@ body {
 footer {
     color: white;
     margin-top: auto;
+    background-color: #30D5C8; /* Turquoise blue color */
 }
 
-/* Add support for Tailwind bg classes if custom CSS is needed */
+/* Override Tailwind bg classes since we want a consistent turquoise */
 .bg-\[\#659f8f\] {
-    background-color: #659f8f;
+    background-color: #30D5C8; /* Turquoise blue color */
 }
 
 @media (prefers-color-scheme: dark) {
     .dark\:bg-\[\#313131\] {
-        background-color: #313131;
+        background-color: #30D5C8; /* Keep turquoise even in dark mode */
     }
 }
 
@@ -82,7 +84,7 @@ footer {
 }
 
 .newsletter-section {
-    flex: 0 0 100%;
+    flex: 0 0 45%; /* Changed from 100% to 45% */
     margin-bottom: 30px;
 }
 
@@ -118,9 +120,10 @@ footer {
 .links-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
+    width: 45%; /* Changed from 100% to 45% */
+    padding-top: 0; /* Removed top padding */
+    border-top: none; /* Removed top border */
+    margin-left: auto; /* Added to push to the right */
 }
 
 .quick-links, .technologies {
@@ -154,6 +157,7 @@ footer {
 .logo-section {
     margin-top: 30px;
     width: 100%;
+    clear: both; /* Added to ensure it stays below both sections */
 }
 
 .footer-logo {
@@ -166,6 +170,12 @@ footer {
 @media screen and (min-width: 768px) {
     .container {
         max-width: 90%;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: nowrap; /* Changed to prevent wrapping */
+        align-items: flex-start; /* Align items at the top */
     }
     
     .newsletter-section {
@@ -186,6 +196,16 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+    /* Mobile layout reverts to stacked */
+    .footer-container {
+        flex-direction: column;
+    }
+    
+    .newsletter-section, .links-container {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    
     .quick-links, .technologies {
         flex: 0 0 48%;
     }
@@ -207,6 +227,7 @@ footer {
     
     .links-container {
         flex-direction: column;
+        width: 100%; /* Full width on small screens */
     }
     
     .quick-links, .technologies {
