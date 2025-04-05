@@ -8,14 +8,11 @@
   
   body {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
   }
   
   /* Footer styles */
   footer {
     color: white;
-    margin-top: auto;
     background-color: #5ead9a;
     padding: 40px 0 20px;
   }
