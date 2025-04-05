@@ -4,172 +4,130 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
+  }
+  
+  body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-/* Footer styles */
-footer {
+  }
+  
+  /* Footer styles */
+  footer {
     color: white;
     margin-top: auto;
-    background-color: #5ead9a; /* Exact green/teal color from the image */
+    background-color: #5ead9a;
     padding: 40px 0 20px;
-}
-
-.footer-container {
+  }
+  
+  .footer-container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-/* Newsletter section */
-.newsletter-section {
-    flex: 0 0 45%;
-    margin-bottom: 30px;
-}
-
-.newsletter-section h3 {
+    align-items: flex-start;
+  }
+  
+  /* Newsletter section */
+  .newsletter-section {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .newsletter-section h3 {
     font-size: 18px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 500;
-}
-
-.form-container {
+  }
+  
+  .form-container {
     display: flex;
-    max-width: 400px;
-}
-
-.form-container input[type="email"] {
+    max-width: 300px;
+  }
+  
+  .form-container input[type="email"] {
     flex: 1;
-    padding: 12px 15px;
+    padding: 8px 12px;
     border: none;
     border-radius: 3px;
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 14px;
-}
-
-.form-container button {
-    background-color: #E17F54; /* Orange button color */
+  }
+  
+  .form-container button {
+    background-color: #e17f54;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 8px 15px;
     border-radius: 3px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
-}
-
-/* Links section */
-.links-wrapper {
-    flex: 0 0 45%;
+  }
+  
+  /* Links section */
+  .links-wrapper {
     display: flex;
     justify-content: space-between;
-
-}
-
-.quick-links, .technologies {
-    flex: 0 0 45%;
-    float: right;
-}
-
-.footer-heading {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .quick-links,
+  .technologies {
+    flex: 1;
+  }
+  
+  .footer-heading {
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: 500;
     color: #333;
-}
-
-.footer-links {
+  }
+  
+  .footer-links {
     list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
+  }
+  
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links a {
     color: #333;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
+  }
+  
+  .footer-links a:hover {
     color: white;
-}
-
-/* Divider line */
-.divider {
+  }
+  
+  /* Divider line */
+  .divider {
     width: 100%;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 20px 0 30px;
-}
-
-/* Logo section */
-.logo-section {
+    margin: 20px 0;
+  }
+  
+  /* Logo section */
+  .logo-section {
     width: 100%;
-}
-
-.footer-logo {
+    text-align: left;
+  }
+  
+  .footer-logo {
     font-size: 22px;
     letter-spacing: 2px;
     font-weight: bold;
     color: white;
-}
-
-.logo-space {
+  }
+  
+  .logo-space {
     color: #333;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 1024px) {
-    .footer-container {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* iPad and similar */
-    .newsletter-section, .links-wrapper {
-        flex: 0 0 100%;
-    }
-    
-    .links-wrapper {
-        margin-top: 30px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* iPhone and mobile */
-    .form-container {
-        flex-direction: column;
-    }
-    
-    .form-container input[type="email"] {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 100%;
-    }
-    
-    .links-wrapper {
-        flex-direction: column;
-    }
-    
-    .quick-links, .technologies {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .newsletter-section h3 {
-        font-size: 16px;
-    }
-}
+  }
